@@ -164,7 +164,7 @@ dim_plot + ggtitle(glue::glue("No. of PCs : {num_of_pc}"))
 
 ### UMAP plots for different number of PCs. 
 
-To check whether the number of clusters affected by the choice of optimum PCs, we run clustering followed by visualization through UMAP plot for multiple choices of optimum PCs.   
+To check whether the number of clusters affected by the choice of optimum PCs, I run clustering followed by visualization through UMAP plot for multiple choices of optimum PCs.   
 
 ```{r, fig.height=8}
 
@@ -217,9 +217,9 @@ fp
 
 ### Cell cycle regression 
 
-In the single cell RNA-seq data cellular heterogeneity comes from cell cycle besides primary source of heterogeneity. One of the ways to mitigate the effect of cell cycle heterogeneity is cell cycle regression analysis. In this analysis, each cell is assigned with cell cycle phase score depending upon the gene expression profile of well established cell cycle marker genes. Here, we used genes of S phase and G2M phase as cell cycle marker. Further, method also tries to predict state of cell cycle phase from the score assigned to each cell. 
+In the single cell RNA-seq data cellular heterogeneity comes from cell cycle besides primary source of heterogeneity. One of the ways to mitigate the effect of cell cycle heterogeneity is cell cycle regression analysis. In this analysis, each cell is assigned with cell cycle phase score depending upon the gene expression profile of well established cell cycle marker genes. Here, I used genes of S phase and G2M phase as cell cycle marker. Further, method also tries to predict state of cell cycle phase from the score assigned to each cell. 
 
-Once we regress the effect of cell cycle marker genes from the data, the effect of cell cycle heterogeneity will be nullified. This can be confirmed by the PCA analysis performed by  cell cycle marker genes with and without regressing them from the scaled data. 
+Once I regress the effect of cell cycle marker genes from the data, the effect of cell cycle heterogeneity will be nullified. This can be confirmed by the PCA analysis performed by  cell cycle marker genes with and without regressing them from the scaled data. 
 
 ```{r, fig.width = 8, fig.height = 5}
 
@@ -252,6 +252,6 @@ DimPlot(d14_ventral_cdna.seurat , reduction = "pca") + ggtitle("With Cell Cycle 
 
 ```
 
-We can see here that when we run the PCA with cell cycle regression applied, cells no more separates in multiple clusters suggesting that cellular heterogeneity lost which were there from  cell cycle markers.
+We can see here that when PCA was run with cell cycle regression applied, cells no more separates in multiple clusters suggesting that cellular heterogeneity lost which were there from  cell cycle markers.
 
 
